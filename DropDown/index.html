@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1=1.0">
+        <title>Drop down</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/9b776a6ba6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="dropdown" data-dropdown>
+                <button class="link" data-dropdown-button>Information</button>
+                <div class="dropdown-menu">
+                    Dropdown content
+                </div>
+            </div>
+            <a href="#" class="link">Pricing</a>
+            <button class="link" data-dropdown-button>Login</button>
+        </div>
+
+        <script>
+            document.addEventListener("click", e => {
+                const dropdownButton = e.target.matches("[data-dropdown-button]")
+                if (!dropdownButton && e.target.closest("[data-dropdown]") != null) return
+                
+                let currrenDropdown
+                if(dropdownButton){
+                    currrenDropdown = e.target.closest("[data-dropdown]")
+                    currrenDropdown.classList.toggle("active")
+                }
+                document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+                    if (dropdown === currrenDropdown) return
+                    dropdown.classList.remove('active')
+                })
+            })
+        </script>
+    </body>
+</html>
