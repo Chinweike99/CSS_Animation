@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            img{
+                border-radius: 100%;
+            }
+            .zoom-animation:hover{
+                opacity: 0;
+                animation: zoomIn 1s ease forwards;
+            }
+            .zoom-animation.exit:hover{
+                animation: zoomOut 1.5s ease backwards;
+            }
+            @keyframes zoomIn{
+                from{transform: scale(0); opacity: 0;}
+                to{transform: scale(1); opacity: 1;}
+            }
+            @keyframes zoomOut{
+                from{transform: scale(1); opacity: 1;}
+                to{transform: scale(0); opacity: 0;}
+            }
+        </style>
+    </head>
+    <body>
+        <img src="image1.jpg" class="zoom-animation" alt="image description">
+        <img src="image2.jpg" class="zoom-animation exit" alt="image description">
+    </body>
+</html>
