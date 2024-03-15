@@ -1,0 +1,55 @@
+*{
+    background: #d1cfcf;
+}
+.glitch-effect{
+    position: relative;
+    animation: glitch 1s steps(2, end) infinite alternate;
+    color: #260638;
+}
+.glitch-effect::after,
+.glitch-effect::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.glitch-effect::after{
+    background-image: url("noise_image.jpg");
+    background-repeat: repeat;
+    animation: glitch-distort 2s steps(4, end) infinite alternate;
+}
+.glitch-effect::before{
+    background-color: inherit;
+    animation: glitch-flicker 1s steps(4, end) infinite alternate;
+}
+@keyframes glich {
+    0%{
+        opacity: 1;
+    }    
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes glitch-distort{
+    0%, 100%{
+        transform: none;
+    }
+    25%, 75%{
+        transform: translateX(5px) skew(4deg);
+    }
+}
+@keyframes glitch-flicker{
+    0%, 100%{
+        background-color: inherit;
+    }
+    50%{
+        background-color: rgba(255, 0, 0, 0.3);
+    }
+}
