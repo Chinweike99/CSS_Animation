@@ -1,0 +1,31 @@
+.info-container{
+    position: relative;
+    background-color: #333;
+    width: 200px;
+}
+.info-container img{
+    width: 200px;
+    height: 200px;
+}
+.info-container img,
+.info-container .icon{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.info-tooltip{
+    position: absolute;
+    top: 100%;
+    transform: translateX(-0%);
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    opacity: 1;
+    transition:  opacity 0.2s ease-in-out;
+    visibility: hidden;
+}
+.info-container:hover .info-tooltip,
+.info-container:focus .info-tooltip{
+    opacity: 1;
+    visibility: visible;
+}
