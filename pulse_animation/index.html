@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1=1.0">
+        <title>Drop down</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/9b776a6ba6.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+                background: #555;
+            }
+            .pulse-animation{
+                animation: pulse 1.5s ease-in-out infinite;
+                background: linear-gradient(120deg, #53f8d4 15%, #dd7171 60%, #f8be53);
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                color: #fff;
+                font-weight: 600;
+                font-family: cursive;
+            }
+            @keyframes pulse {
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(1.05);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <button class="pulse-animation">Pulse button</button>
+    </body>
+</html>
