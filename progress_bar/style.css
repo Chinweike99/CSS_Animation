@@ -29,3 +29,33 @@
     opacity: 1;
     visibility: visible;
 }
+
+svg{
+    margin-top: 10px;
+    color: #ee0d0d;
+    width: 200px;
+    height: 200px;
+}
+.path-animation{
+    fill: none;
+    stroke: #000;
+    stroke-width: 2px;
+    animation: pathMorph 5s ease-in-out forwards;
+}
+/*@keyframes pathMorph {
+    from {
+      d: M0,0 L50,50 L100,0 Z;  /* Path data for path1 
+    }
+    to {
+      d: M0,0 C50,80 100,20 100,20 Z;  /* Path data for path2 /
+    }
+  }
+
+@keyframes pathMorph{
+    from{
+        d: path(#path1);
+    }
+    to{
+        d: path(#path2);
+    }
+}*/
